@@ -6,7 +6,7 @@
 
   <groupId>org.slf4j</groupId>
   <artifactId>slf4j-parent</artifactId>
-  <version>1.7.34-SNAPSHOT</version>
+  <version>1.7.34-KB-RELEASE-SLF4J-165-unknown_priorities</version>
 
   <packaging>pom</packaging>
   <name>SLF4J</name>
@@ -28,8 +28,7 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/qos-ch/slf4j</url>
-    <connection>git@github.com:qos-ch/slf4j.git</connection>
+    <url>https://github.com/DavesMan/slf4j</url>
   </scm>  
 
   <properties>
@@ -422,18 +421,17 @@
   </pluginRepositories>
 
   <distributionManagement>
-    <site>
-      <id>qos_ch</id>
-      <url>scp://te.qos.ch/var/www/www.slf4j.org/htdocs/</url>
-    </site>
-
     <repository>
-      <!--<id>pixie</id>-->
-      <!--<url>scp://pixie.qos.ch/var/mvnrepo/</url>-->
-      <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        <id>nexus-3rd-party</id>
+        <name>Nexus RELEASE repo</name>
+        <url>https://nexus3.kb.cz/repository/thirdparty/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
     </repository>
-
   </distributionManagement>
 
 </project>
